@@ -16,6 +16,8 @@ nav a { display: inline-block; transition: background-color 140ms ease, filter 1
 nav[aria-label="Main"] a:hover { background: rgba(14, 77, 82, 0.09); }
 nav[aria-label="Footer"] a:hover { background: rgba(255, 255, 255, 0.16); }
 nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translateY(-2px); }
+a.footer-link { color: #FFFFFF; text-decoration: underline; }
+a.footer-link:hover { color: #F0C178; }
 </style>
 </head>
 <body>
@@ -25,7 +27,7 @@ nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translat
   <div style="background: #0E4D52; color: #FFFFFF">
     <div style="max-width: 1160px; margin: 0 auto; padding: 11px 32px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between">
       <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase">Official project site</p>
-      <p style="margin: 0; font-size: 13px; color: #8FBDBC">Last updated October 29, 2026</p>
+      <p style="margin: 0; font-size: 13px; color: #8FBDBC">Last updated October 30, 2026</p>
     </div>
   </div>
 
@@ -37,19 +39,55 @@ nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translat
       </a>
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 2px">
         <a href="index.html" aria-current="page" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px; box-shadow: inset 0 -4px 0 #9C6309">Home</a>
-        <a href="plan.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">The plan</a>
-        <a href="priorities.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">What it covers</a>
+        <a href="about.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">About</a>
         <a href="apply.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">Apply</a>
         <a href="meetings.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">Meetings</a>
       </nav>
     </div>
   </div>
 
+  <!-- Hero -->
+  <div style="max-width: 1160px; margin: 0 auto; padding: 54px 32px 44px">
+    <p style="margin: 0 0 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9C6309">Cobbs Creek Park · West &amp; Southwest Philadelphia</p>
+    <h1 style="margin: 0 0 30px; font-family: Archivo, system-ui, sans-serif; font-size: 64px; line-height: 0.99; font-weight: 800; letter-spacing: -0.03em">A shared vision for <span style="white-space: nowrap">Cobbs Creek Park.</span></h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end">
+      <p style="flex: 999 1 420px; min-width: 0; margin: 0; font-size: 20px; line-height: 1.6; color: #3E4D49; max-width: 60ch">The future of Cobbs Creek starts with its neighbors. Residents and local organizations are coming together to guide improvements to the park, its trails, and the creek. Their priorities will shape future investment and a shared approach to caring for these spaces over time.</p>
+      <a href="about.html" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 10px; background: #0E4D52; color: #FFFFFF; text-decoration: none; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 700; padding: 18px 30px">
+        Explore the project
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+    <svg viewBox="0 0 1096 24" width="100%" height="24" aria-hidden="true" style="display: block; margin-top: 40px; overflow: visible">
+      <path d="M0 12c92-15 152 15 244 0s152 15 244 0 152 15 244 0 152 15 244 0 152 15 244 0" stroke="#A8C4C3" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+      <path d="M0 20c92-15 152 15 244 0s152 15 244 0 152 15 244 0 152 15 244 0 152 15 244 0" stroke="#CFD8D5" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
+    </svg>
+  </div>
+
+  <!-- Two openings, soonest deadline first -->
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 32px 52px">
+    <h2 style="margin: 0 0 24px; font-family: Archivo, sans-serif; font-size: 30px; line-height: 1.1; font-weight: 800; letter-spacing: -0.025em">Learn more about available opportunities</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 24px">
+      <div style="flex: 1 1 420px; min-width: 0; color: #16211F; background: #FFFFFF; border: 3px solid #0E4D52; padding: 30px">
+        <p style="margin: 0 0 14px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #566560">For neighbors · closes Nov 16</p>
+        <h3 style="margin: 0 0 12px; font-family: Archivo, sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1">Community Greening Liaison</h3>
+        <p style="margin: 0 0 14px; font-size: 17px; line-height: 1.6; color: #3E4D49">We are seeking Cobbs Creek resident park champions.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6"><a href="apply.html" style="font-weight: 700">Learn about the Liaison role</a></p>
+      </div>
+
+      <div style="flex: 1 1 420px; min-width: 0; color: #16211F; background: #FFFFFF; border: 3px solid #0E4D52; padding: 30px">
+        <p style="margin: 0 0 14px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #566560">For consultants · due Nov 27</p>
+        <h3 style="margin: 0 0 12px; font-family: Archivo, sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1">Plan Development Consultant</h3>
+        <p style="margin: 0 0 14px; font-size: 17px; line-height: 1.6; color: #3E4D49">We are seeking a consultant to lead the planning process and write the plan with the community.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6"><a href="apply.html" style="font-weight: 700">Learn more about the consultant role</a></p>
+      </div>
+    </div>
+  </div>
+
   <!-- Upcoming key events -->
   <div style="background: #0E4D52; color: #E6EFEE">
-    <div style="max-width: 1160px; margin: 0 auto; padding: 30px 32px 34px">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 44px 32px 40px">
       <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: baseline; justify-content: space-between; margin-bottom: 22px">
-        <p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8FBDBC">Upcoming key events</p>
+        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: 30px; line-height: 1.1; font-weight: 800; letter-spacing: -0.025em; color: #FFFFFF">Upcoming key events</h2>
         <a href="meetings.html" style="color: #FFFFFF; font-size: 15px; font-weight: 700; padding: 8px 0">All meetings</a>
       </div>
 
@@ -96,44 +134,10 @@ nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translat
     </div>
   </div>
 
-  <!-- Hero -->
-  <div style="max-width: 1160px; margin: 0 auto; padding: 54px 32px 44px">
-    <p style="margin: 0 0 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9C6309">Cobbs Creek Park · West &amp; Southwest Philadelphia</p>
-    <h1 style="margin: 0 0 30px; font-family: Archivo, system-ui, sans-serif; font-size: 64px; line-height: 0.99; font-weight: 800; letter-spacing: -0.03em">A shared vision for <span style="white-space: nowrap">Cobbs Creek Park.</span></h1>
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end">
-      <p style="flex: 999 1 420px; min-width: 0; margin: 0; font-size: 20px; line-height: 1.6; color: #3E4D49; max-width: 60ch">The future of Cobbs Creek starts with its neighbors. Residents and local organizations are coming together to guide improvements to the park, its trails, and the creek. Their priorities will shape future investment and a shared approach to caring for these spaces over time.</p>
-      <a href="plan.html" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 10px; background: #0E4D52; color: #FFFFFF; text-decoration: none; font-family: Archivo, sans-serif; font-size: 17px; font-weight: 700; padding: 18px 30px">
-        Explore the project
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      </a>
-    </div>
-    <svg viewBox="0 0 1096 24" width="100%" height="24" aria-hidden="true" style="display: block; margin-top: 40px; overflow: visible">
-      <path d="M0 12c92-15 152 15 244 0s152 15 244 0 152 15 244 0 152 15 244 0 152 15 244 0" stroke="#A8C4C3" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
-      <path d="M0 20c92-15 152 15 244 0s152 15 244 0 152 15 244 0 152 15 244 0 152 15 244 0" stroke="#CFD8D5" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
-    </svg>
-  </div>
-
-  <!-- Two openings, soonest deadline first -->
-  <div style="max-width: 1160px; margin: 0 auto; padding: 0 32px 52px">
-    <h2 style="margin: 0 0 24px; font-family: Archivo, sans-serif; font-size: 30px; line-height: 1.1; font-weight: 800; letter-spacing: -0.025em">Learn more about available opportunities</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 24px">
-      <div style="flex: 1 1 420px; min-width: 0; color: #16211F; background: #FFFFFF; border: 3px solid #0E4D52; padding: 30px">
-        <p style="margin: 0 0 14px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #566560">For neighbors · closes Nov 16</p>
-        <h3 style="margin: 0 0 12px; font-family: Archivo, sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1">Community Greening Liaison</h3>
-        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #3E4D49">We are seeking Cobbs Creek resident park champions. <a href="apply.html" style="font-weight: 700">Learn about the Liaison role</a>.</p>
-      </div>
-
-      <div style="flex: 1 1 420px; min-width: 0; color: #16211F; background: #FFFFFF; border: 3px solid #0E4D52; padding: 30px">
-        <p style="margin: 0 0 14px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #566560">For consultants · due Nov 27</p>
-        <h3 style="margin: 0 0 12px; font-family: Archivo, sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1">Plan Development Consultant</h3>
-        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #3E4D49">We are seeking a consultant to lead the planning process and write the plan with the community. <a href="apply.html" style="font-weight: 700">Read about the consultant role</a>.</p>
-      </div>
-    </div>
-  </div>
-
-  <div style="background: #0E4D52; color: #8FBDBC">
+  <div style="background: #0E4D52; color: #8FBDBC; border-top: 1px solid #1F6469">
     <div style="max-width: 1160px; margin: 0 auto; padding: 36px 32px; display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between">
-      <p style="margin: 0; font-size: 14px; line-height: 1.6">Cobbs Creek Community Greening Plan<br>Funded by the William Penn Foundation</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6">Cobbs Creek Community Greening Plan</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6">Funded by the <a class="footer-link" href="https://williampennfoundation.org">William Penn Foundation</a></p>
     </div>
   </div>
 

@@ -16,6 +16,8 @@ nav a { display: inline-block; transition: background-color 140ms ease, filter 1
 nav[aria-label="Main"] a:hover { background: rgba(14, 77, 82, 0.09); }
 nav[aria-label="Footer"] a:hover { background: rgba(255, 255, 255, 0.16); }
 nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translateY(-2px); }
+a.footer-link { color: #FFFFFF; text-decoration: underline; }
+a.footer-link:hover { color: #F0C178; }
 </style>
 </head>
 <body>
@@ -25,7 +27,7 @@ nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translat
   <div style="background: #0E4D52; color: #FFFFFF">
     <div style="max-width: 1160px; margin: 0 auto; padding: 11px 32px; display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; justify-content: space-between">
       <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase">Official project site</p>
-      <p style="margin: 0; font-size: 13px; color: #8FBDBC">Last updated October 29, 2026</p>
+      <p style="margin: 0; font-size: 13px; color: #8FBDBC">Last updated October 30, 2026</p>
     </div>
   </div>
 
@@ -37,8 +39,7 @@ nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translat
       </a>
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 2px">
         <a href="index.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">Home</a>
-        <a href="plan.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">The plan</a>
-        <a href="priorities.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">What it covers</a>
+        <a href="about.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">About</a>
         <a href="apply.html" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px">Apply</a>
         <a href="meetings.html" aria-current="page" style="color: #0E4D52; text-decoration: none; font-size: 15px; font-weight: 700; padding: 13px 13px; box-shadow: inset 0 -4px 0 #9C6309">Meetings</a>
       </nav>
@@ -97,7 +98,8 @@ nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translat
 
   <div style="background: #0E4D52; color: #8FBDBC">
     <div style="max-width: 1160px; margin: 0 auto; padding: 36px 32px; display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; justify-content: space-between">
-      <p style="margin: 0; font-size: 14px; line-height: 1.6">Cobbs Creek Community Greening Plan<br>Funded by the William Penn Foundation</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6">Cobbs Creek Community Greening Plan</p>
+      <p style="margin: 0; font-size: 14px; line-height: 1.6">Funded by the <a class="footer-link" href="https://williampennfoundation.org">William Penn Foundation</a></p>
     </div>
   </div>
 
