@@ -21,6 +21,16 @@ nav[aria-label="Footer"] a:hover { background: rgba(255, 255, 255, 0.16); }
 nav[aria-label="Months"] a:hover { filter: brightness(0.94); transform: translateY(-2px); }
 a.footer-link { color: #FFFFFF; text-decoration: underline; }
 a.footer-link:hover { color: #F0C178; }
+.gallery-stage { position: relative; width: 100%; aspect-ratio: 2 / 1; background: #0E4D52; border: 3px solid #0E4D52; overflow: hidden; }
+.gallery-slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 600ms ease; }
+.gallery-slide[data-active="true"] { opacity: 1; }
+.gallery-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gallery-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }
+.gallery-bar button { font-family: inherit; font-size: 15px; font-weight: 700; color: #0E4D52; background: #FFFFFF; border: 2px solid #0E4D52; padding: 10px 16px; min-width: 46px; min-height: 46px; cursor: pointer; }
+.gallery-bar button:hover { background: #0E4D52; color: #FFFFFF; }
+.gallery-bar button:focus-visible { outline: 3px solid #9C6309; outline-offset: 2px; }
+.gallery-count { margin: 0 0 0 auto; font-size: 15px; color: #566560; }
+@media (prefers-reduced-motion: reduce) { .gallery-slide { transition: none; } }
 
 @media (max-width: 900px) {
   [style*="font-size: 64px"] { font-size: 46px !important; }
@@ -46,6 +56,7 @@ a.footer-link:hover { color: #F0C178; }
   nav[aria-label="Main"] a { padding: 10px 9px !important; font-size: 14.5px !important; }
   div[style*="gap: 56px"] { gap: 18px !important; }
   div[style*="gap: 40px"] { gap: 24px !important; }
+  .gallery-count { margin-left: 0 !important; }
   table { font-size: 15px !important; }
 }
 </style>
@@ -76,6 +87,17 @@ a.footer-link:hover { color: #F0C178; }
     </div>
   </div>
 
+  <!-- Next community meeting -->
+  <div style="background: #9C6309; color: #FFFFFF">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between">
+      <p style="margin: 0; flex: 1 1 420px; min-width: 0; font-size: 17.5px; line-height: 1.45">
+        <strong style="font-family: Archivo, sans-serif; font-weight: 800; letter-spacing: -0.01em">Next community meeting</strong>
+        &nbsp;Tuesday, December 1, 6:00&ndash;7:30 PM at the Cobbs Creek Community Environmental Center. Everyone welcome.
+      </p>
+      <a href="meetings.html" style="color: #FFFFFF; font-size: 15.5px; font-weight: 700; white-space: nowrap">All meetings</a>
+    </div>
+  </div>
+
   <!-- Hero -->
   <div style="max-width: 1160px; margin: 0 auto; padding: 54px 32px 44px">
     <p style="margin: 0 0 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9C6309">Cobbs Creek Park · West &amp; Southwest Philadelphia</p>
@@ -87,10 +109,52 @@ a.footer-link:hover { color: #F0C178; }
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </a>
     </div>
-    <svg viewBox="0 -8 1096 40" width="100%" height="40" aria-hidden="true" style="display: block; margin-top: 32px; overflow: hidden">
-      <path d="M0 12c92-15 152 15 244 0s152 15 244 0 152 15 244 0 152 15 244 0 152 15 244 0" stroke="#A8C4C3" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
-      <path d="M0 20c92-15 152 15 244 0s152 15 244 0 152 15 244 0 152 15 244 0 152 15 244 0" stroke="#CFD8D5" stroke-width="1.5" fill="none" stroke-linecap="round"></path>
-    </svg>
+    <div data-gallery data-interval="10000" style="margin-top: 38px">
+      <div class="gallery-stage">
+        <figure class="gallery-slide" data-active="true">
+          <img src="photos/trail-walk.jpg" alt="Four people walking away from the camera along a shaded gravel trail through dense green summer woodland">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/creek-bridge.jpg" loading="lazy" alt="Cobbs Creek running between wooded banks, seen from the park bridge, with the trees in fall colour">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/meadow.jpg" loading="lazy" alt="A broad meadow of tall yellow wildflowers backed by dense summer woodland">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/water-testing.jpg" loading="lazy" alt="Three people in chest waders standing in the creek below a green footbridge, holding sampling bottles">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/bee-balm.jpg" loading="lazy" alt="Clusters of pale purple wildflowers standing above meadow grasses">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/park-center.jpg" loading="lazy" alt="A wooden sign reading Cobbs Creek Community Environmental Education Center, set among trees">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/spider-web.jpg" loading="lazy" alt="A spider at the centre of its web, lit from behind against dark woodland">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/debris.jpg" loading="lazy" alt="A shopping cart lying on its side in shallow water among fallen leaves">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/meadow-berries.jpg" loading="lazy" alt="A cluster of ripe red berries on a bramble, surrounded by green leaves">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/sewer-outfall.jpg" loading="lazy" alt="A large concrete sewer outfall set into a creek bank and overhung with vegetation">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/dayflower.jpg" loading="lazy" alt="A small bright blue wildflower with yellow stamens, growing among broad green leaves">
+        </figure>
+        <figure class="gallery-slide" data-active="false">
+          <img src="photos/raised-beds.jpg" loading="lazy" alt="Two green corrugated metal raised planting beds set in grass beside a path">
+        </figure>
+      </div>
+      <div class="gallery-bar">
+        <button type="button" data-gallery-prev aria-label="Previous photo">Previous</button>
+        <button type="button" data-gallery-toggle aria-pressed="false">Pause</button>
+        <button type="button" data-gallery-next aria-label="Next photo">Next</button>
+        <p class="gallery-count" aria-live="polite">1 of 12</p>
+      </div>
+    </div>
   </div>
 
   <!-- Two openings, soonest deadline first -->
@@ -113,58 +177,7 @@ a.footer-link:hover { color: #F0C178; }
     </div>
   </div>
 
-  <!-- Upcoming key events -->
-  <div style="background: #0E4D52; color: #E6EFEE">
-    <div style="max-width: 1160px; margin: 0 auto; padding: 44px 32px 40px">
-      <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: baseline; justify-content: space-between; margin-bottom: 22px">
-        <h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: 30px; line-height: 1.1; font-weight: 800; letter-spacing: -0.025em; color: #FFFFFF">Upcoming key events</h2>
-        <a href="meetings.html" style="color: #FFFFFF; font-size: 15px; font-weight: 700; padding: 8px 0">All meetings</a>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: baseline; padding: 14px 0; border-top: 1px solid #1F6469">
-        <p style="flex: 0 0 170px; margin: 0; font-family: Archivo, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF">Mon, Nov 9</p>
-        <div style="flex: 999 1 320px; min-width: 0">
-          <p style="margin: 0 0 3px; font-size: 17px; font-weight: 600">Community Greening partners meeting</p>
-          <p style="margin: 0; font-size: 15px; color: #8FBDBC">6:00–7:30 PM · Cobbs Creek Community Environmental Education Center</p>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: baseline; padding: 14px 0; border-top: 1px solid #1F6469">
-        <p style="flex: 0 0 170px; margin: 0; font-family: Archivo, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF">Thu, Nov 12</p>
-        <div style="flex: 999 1 320px; min-width: 0">
-          <p style="margin: 0 0 3px; font-size: 17px; font-weight: 600">Steering Committee meeting</p>
-          <p style="margin: 0; font-size: 15px; color: #8FBDBC">3:00–4:30 PM · Online</p>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: baseline; padding: 14px 0; border-top: 1px solid #1F6469">
-        <p style="flex: 0 0 170px; margin: 0; font-family: Archivo, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: #F0C178">Mon, Nov 16</p>
-        <div style="flex: 999 1 320px; min-width: 0">
-          <p style="margin: 0 0 3px; font-size: 17px; font-weight: 600">Community Greening Liaison nominations close</p>
-          <p style="margin: 0; font-size: 15px; color: #8FBDBC">Nominate yourself or a neighbor before this date</p>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: baseline; padding: 14px 0; border-top: 1px solid #1F6469">
-        <p style="flex: 0 0 170px; margin: 0; font-family: Archivo, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: #F0C178">Fri, Nov 27</p>
-        <div style="flex: 999 1 320px; min-width: 0">
-          <p style="margin: 0 0 3px; font-size: 17px; font-weight: 600">Consultant RFP applications due</p>
-          <p style="margin: 0; font-size: 15px; color: #8FBDBC">Deadline extended — earlier dates no longer apply</p>
-        </div>
-      </div>
-
-      <div style="background: #0A3B3F; border: 2px solid #F0C178; margin-top: 18px; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: center">
-        <p style="flex: 0 0 150px; margin: 0; font-family: Archivo, sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #F0C178; line-height: 1.1">Tue, Dec 1</p>
-        <div style="flex: 999 1 320px; min-width: 0">
-          <p style="margin: 0 0 6px; font-family: Archivo, sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF; line-height: 1.2">Greening Plan community meeting</p>
-          <p style="margin: 0; font-size: 16px; color: #BBD4D3">6:00–7:30 PM · Cobbs Creek Community Environmental Center, 700 Cobbs Creek Pkwy</p>
-        </div>
-        <span style="flex: 0 0 auto; background: #F0C178; color: #0E4D52; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 13px">Everyone welcome</span>
-      </div>
-    </div>
-  </div>
-
-  <div style="background: #0E4D52; color: #8FBDBC; border-top: 1px solid #1F6469">
+  <div style="background: #0E4D52; color: #8FBDBC">
     <div style="max-width: 1160px; margin: 0 auto; padding: 36px 32px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
       <p style="margin: 0; font-size: 14px; line-height: 1.6">Cobbs Creek Community Greening Plan</p>
       <p style="margin: 0; flex: 1 1 auto; text-align: center; font-size: 14px; line-height: 1.6">Questions? Please reach out to us at <a class="footer-link" href="mailto:cobbscreekgreeningplan@gmail.com">cobbscreekgreeningplan@gmail.com</a></p>
@@ -173,6 +186,58 @@ a.footer-link:hover { color: #F0C178; }
   </div>
 
 </div>
+<script>
+(function () {
+  var galleries = document.querySelectorAll('[data-gallery]');
+  Array.prototype.forEach.call(galleries, function (g) {
+    var slides = g.querySelectorAll('.gallery-slide');
+    if (slides.length < 2) { return; }
+    var count = g.querySelector('.gallery-count');
+    var toggle = g.querySelector('[data-gallery-toggle]');
+    var wait = parseInt(g.getAttribute('data-interval'), 10) || 10000;
+    var reduce = window.matchMedia
+      && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var at = 0, timer = null, userPaused = reduce;
 
+    function show(n) {
+      at = (n + slides.length) % slides.length;
+      Array.prototype.forEach.call(slides, function (s, k) {
+        s.setAttribute('data-active', k === at ? 'true' : 'false');
+      });
+      if (count) { count.textContent = (at + 1) + ' of ' + slides.length; }
+    }
+    function run() { if (!timer) { timer = setInterval(function () { show(at + 1); }, wait); } }
+    function halt() { if (timer) { clearInterval(timer); timer = null; } }
+    function label() {
+      if (!toggle) { return; }
+      toggle.textContent = userPaused ? 'Play' : 'Pause';
+      toggle.setAttribute('aria-pressed', userPaused ? 'true' : 'false');
+    }
+
+    g.querySelector('[data-gallery-prev]').addEventListener('click', function () {
+      show(at - 1); userPaused = true; halt(); label();
+    });
+    g.querySelector('[data-gallery-next]').addEventListener('click', function () {
+      show(at + 1); userPaused = true; halt(); label();
+    });
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        userPaused = !userPaused;
+        if (userPaused) { halt(); } else { run(); }
+        label();
+      });
+    }
+    // pause while someone is reading a caption, but never override an explicit pause
+    g.addEventListener('mouseenter', halt);
+    g.addEventListener('focusin', halt);
+    g.addEventListener('mouseleave', function () { if (!userPaused) { run(); } });
+    g.addEventListener('focusout', function () { if (!userPaused) { run(); } });
+
+    show(0);
+    label();
+    if (!userPaused) { run(); }
+  });
+})();
+</script>
 </body>
 </html>
